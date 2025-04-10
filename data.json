@@ -1,0 +1,31 @@
+{
+    "expenses": [
+        {
+            "date": "2024-03-24",
+            "category": "Food",
+            "amount": 150.0,
+            "description": "Lunch"
+        },
+        {
+            "date": "2024-03-24",
+            "category": "CFood",
+            "amount": 150.0,
+            "description": "Lunch"
+        },
+        {
+            "date": "2025-4-10",
+            "category": "Food",
+            "amount": 150.0,
+            "description": "Lunch"
+        },
+        {
+            "date": "2025-04-10",
+            "category": "Food",
+            "amount": 120.0,
+            "description": "Lunch"
+        }
+    ],
+    "budgets": {
+        "Food": 1000.0
+    }
+}
