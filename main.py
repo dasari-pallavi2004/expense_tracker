@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 
-print("🔍 main.py has started running.")
+print(" main.py has started running.")
 
 DATA_FILE = 'data.json'
 
@@ -44,7 +44,7 @@ def set_budget():
     amount = float(input("Enter monthly budget: "))
     data['budgets'][category] = amount
     save_data(data)
-    print(f"✅ Budget set for {category} = ₹{amount}")
+    print(f" Budget set for {category} = ₹{amount}")
 
 # Check if the user exceeded the budget
 def check_budget(data, category):
@@ -59,24 +59,24 @@ def check_budget(data, category):
     )
 
     if total > budget:
-        print(f"⚠️ ALERT: You have exceeded your budget for {category}!")
+        print(f" ALERT: You have exceeded your budget for {category}!")
     else:
-        print(f"✅ {category} spending is within budget.")
+        print(f" {category} spending is within budget.")
 
 # Generate a monthly report
 def show_report():
     data = load_data()
     current_month = datetime.today().strftime('%Y-%m')
-    print(f"📅 Current month is: {current_month}")  # Debug line
+    print(f" Current month is: {current_month}")  # Debug line
     category_totals = {}
 
     for expense in data['expenses']:
-        print(f"🧾 Found expense: {expense}")  # Debug line
+        print(f" Found expense: {expense}")  # Debug line
         if expense['date'].startswith(current_month):
             cat = expense['category']
             category_totals[cat] = category_totals.get(cat, 0) + expense['amount']
 
-    print("\n📊 --- Monthly Report ---")
+    print("\n --- Monthly Report ---")
     if not category_totals:
         print("No expenses for this month.")
     else:
@@ -100,10 +100,10 @@ def main():
         elif choice == '3':
             show_report()
         elif choice == '4':
-            print("👋 Goodbye!")
+            print(" Goodbye!")
             break
         else:
-            print("❌ Invalid option, try again.")
+            print(" Invalid option, try again.")
 
 # Entry point
 if __name__ == '__main__':
